@@ -114,15 +114,52 @@ const iconsArray = [
 ];
 
 let container = document.querySelector(".container");
-// const iconBox = document.querySelector(".icon-box");
-// const icon = document.querySelector(".icon");
+const filter = document.getElementById("filter");
+console.log(filter);
 
-iconsArray.forEach(element => {
+// iconsArray.forEach(element => {
 	
-	const thisName = element.name.toUpperCase();
+// 	const thisName = element.name.toUpperCase();
 	
-	container.innerHTML += `<div class="icon-box"><div class="icon ${element.color}"><i class="${element.family} ${element.prefix}${element.name}"></i></div><h2>${thisName}</h2></div>`
+// 	container.innerHTML += `<div class="icon-box"><div class="icon ${element.color}"><i class="${element.family} ${element.prefix}${element.name}"></i></div><h2>${thisName}</h2></div>`
 	
-});
+// });
+
+const animalsIcons = iconsArray.filter((element) => element.type === "animal");
+const vegetablesIcons = iconsArray.filter((element) => element.type === "vegetable");
+const userIcons = iconsArray.filter((element) => element.type === "user");
+
+filter.addEventListener("click", function() {
+
+	container.innerHTML = "";
+
+	if (filter.value === "all") {
+
+		iconsArray.forEach(element => {
+			const thisName = element.name.toUpperCase();
+			container.innerHTML += `<div class="icon-box"><div class="icon ${element.color}"><i class="${element.family} ${element.prefix}${element.name}"></i></div><h2>${thisName}</h2></div>`
+		});
+	} else if (filter.value === "animals") {
+
+		animalsIcons.forEach(element => {
+			const thisName = element.name.toUpperCase();
+			container.innerHTML += `<div class="icon-box"><div class="icon ${element.color}"><i class="${element.family} ${element.prefix}${element.name}"></i></div><h2>${thisName}</h2></div>`
+		});
+	} else if (filter.value === "vegetables") {
+
+		vegetablesIcons.forEach(element => {
+			const thisName = element.name.toUpperCase();
+			container.innerHTML += `<div class="icon-box"><div class="icon ${element.color}"><i class="${element.family} ${element.prefix}${element.name}"></i></div><h2>${thisName}</h2></div>`
+		});
+	} else {
+
+		userIcons.forEach(element => {
+			const thisName = element.name.toUpperCase();
+			container.innerHTML += `<div class="icon-box"><div class="icon ${element.color}"><i class="${element.family} ${element.prefix}${element.name}"></i></div><h2>${thisName}</h2></div>`
+		});
+	}
+})
+
+
 
 
