@@ -22,6 +22,9 @@ html {
     color: purple;
 }
 
+body {
+    background-color: #dddddd;
+}
 
 header {
     height: 130px;
@@ -29,10 +32,13 @@ header {
 }
 
 .header-top {
-    height: 50px;
+    background-color: white;
+    height: 80px;
     color: #29b1dd;
     display: flex;
     align-items: flex-end;
+    font-size: 1.5rem;
+    padding-left: 20px;
 }
 
 .header-bottom {
@@ -47,22 +53,23 @@ header {
 }
 
 main {
-    height: calc(100vh - 130px);
-    background-color: #dddddd;
+    height: calc(100vh - 180px);
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 100%;    
+    justify-content: center;
+    margin-top: 2rem;
 }
 
 .icon-box {
     background-color: #f5f5f5;
-    padding: 20px 70px;
-    margin: 30px;
+    padding: 2% 0;
+    margin: 2%;
     border-radius: 10px;
-    width: calc(100% / 5 - 60px);
+    width: calc(100% / 5 - 4%);
     box-shadow: 3px 3px rgba(128, 128, 128, 0.507);
 }
 

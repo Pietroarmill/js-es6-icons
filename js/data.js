@@ -115,16 +115,6 @@ const iconsArray = [
 
 let container = document.querySelector(".container");
 const filter = document.getElementById("filter");
-console.log(filter);
-
-// iconsArray.forEach(element => {
-	
-// 	const thisName = element.name.toUpperCase();
-	
-// 	container.innerHTML += `<div class="icon-box"><div class="icon ${element.color}"><i class="${element.family} ${element.prefix}${element.name}"></i></div><h2>${thisName}</h2></div>`
-	
-// });
-
 const animalsIcons = iconsArray.filter((element) => element.type === "animal");
 const vegetablesIcons = iconsArray.filter((element) => element.type === "vegetable");
 const userIcons = iconsArray.filter((element) => element.type === "user");
