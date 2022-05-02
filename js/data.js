@@ -60,28 +60,28 @@ const iconsArray = [
 		prefix: 'fa-',
 		type: 'vegetable',
 		family: 'fas',
-		color: 'green'
+		color: 'purple'
 	},
 	{
 		name: 'apple-alt',
 		prefix: 'fa-',
 		type: 'vegetable',
 		family: 'fas',
-		color: 'green'
+		color: 'purple'
 	},
 	{
 		name: 'lemon',
 		prefix: 'fa-',
 		type: 'vegetable',
 		family: 'fas',
-		color: 'green'
+		color: 'purple'
 	},
 	{
 		name: 'pepper-hot',
 		prefix: 'fa-',
 		type: 'vegetable',
 		family: 'fas',
-		color: 'green'
+		color: 'purple'
 	},
 	{
 		name: 'user-astronaut',
@@ -113,5 +113,16 @@ const iconsArray = [
 	}
 ];
 
-const container = document.querySelector(".container");
-console.log(container);
+let container = document.querySelector(".container");
+// const iconBox = document.querySelector(".icon-box");
+// const icon = document.querySelector(".icon");
+
+iconsArray.forEach(element => {
+	
+	const thisName = element.name.toUpperCase();
+	
+	container.innerHTML += `<div class="icon-box"><div class="icon ${element.color}"><i class="${element.family} ${element.prefix}${element.name}"></i></div><h2>${thisName}</h2></div>`
+	
+});
+
+
