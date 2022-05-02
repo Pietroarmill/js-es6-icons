@@ -18,7 +18,28 @@
     color: purple;
 }
 
-body {
+
+header {
+    height: 100px;
+    width: 100%;
+}
+
+.header-top {
+    height: 35px;
+    color: #29b1dd;
+}
+
+.header-bottom {
+    height: 65px;
+    text-transform: uppercase;
+    background-color: #29b1dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: calc(100vh - 100px);
     background-color: #dddddd;
 }
 
